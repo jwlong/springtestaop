@@ -24,6 +24,7 @@ public class LogAspect {
 
     @Before("webLog()")
     public void doBefore(JoinPoint joinPoint) throws Throwable{
+        System.out.println("hello");
         System.out.println("Aspect 方法监视中...");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
